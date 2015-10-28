@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="47l-hh-tic">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nZD-fU-jNT"/>
+                                </connections>
+                            </mapView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endPoint.png" translatesAutoresizingMaskIntoConstraints="NO" id="toM-l4-pwW">
+                                <rect key="frame" x="140" y="249" width="40" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ghx-p7-mgu"/>
+                                    <constraint firstAttribute="height" constant="40" id="vSK-Op-T3J"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-HA-HTq">
+                                <rect key="frame" x="0.0" y="74" width="320" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgi-gK-bne">
+                                        <rect key="frame" x="8" y="15" width="304" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="xaV-y4-VMU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Tgi-gK-bne" firstAttribute="leading" secondItem="tYa-HA-HTq" secondAttribute="leading" constant="8" id="Q55-JM-B0a"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tgi-gK-bne" secondAttribute="trailing" constant="8" id="TuH-03-LaG"/>
+                                    <constraint firstItem="Tgi-gK-bne" firstAttribute="top" secondItem="tYa-HA-HTq" secondAttribute="top" constant="15" id="WYx-Ja-Gi9"/>
+                                    <constraint firstAttribute="height" constant="52" id="zVy-NR-jbf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGF-Hf-64f">
+                                <rect key="frame" x="20" y="510" width="25" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="gc3-ns-bFW"/>
+                                    <constraint firstAttribute="height" constant="25" id="zct-f0-Woc"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="location.png"/>
+                                <connections>
+                                    <action selector="touchedLocationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zzn-HR-ke2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="47l-hh-tic" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1cf-Cz-df4"/>
+                            <constraint firstAttribute="trailing" secondItem="47l-hh-tic" secondAttribute="trailing" id="8nd-ej-tY8"/>
+                            <constraint firstAttribute="trailing" secondItem="tYa-HA-HTq" secondAttribute="trailing" id="9Pw-ys-k6C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gGF-Hf-64f" secondAttribute="bottom" constant="33" id="EfN-uc-uOk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="47l-hh-tic" secondAttribute="bottom" id="aDI-ot-PpF"/>
+                            <constraint firstItem="toM-l4-pwW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-15" id="aN3-ai-hDg"/>
+                            <constraint firstItem="toM-l4-pwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBE-NY-m6h"/>
+                            <constraint firstItem="47l-hh-tic" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fk5-w7-THS"/>
+                            <constraint firstItem="tYa-HA-HTq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="iyN-2e-J79"/>
+                            <constraint firstItem="tYa-HA-HTq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jC3-Gq-DRh"/>
+                            <constraint firstItem="gGF-Hf-64f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="tCd-eD-bA1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adressLabel" destination="Tgi-gK-bne" id="Bmp-Z7-Eih"/>
+                        <outlet property="centerImageView" destination="toM-l4-pwW" id="K0D-eP-yP9"/>
+                        <outlet property="mapView" destination="47l-hh-tic" id="ctV-2m-NTQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109" y="406"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="endPoint.png" width="20" height="20"/>
+        <image name="location.png" width="24" height="24"/>
+    </resources>
+</document>
